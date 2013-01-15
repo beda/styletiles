@@ -1,0 +1,179 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:layout name="StyleTilesLayout"/>
+
+    <f:section name="Configuration">
+        <flux:flexform id="banded-page" label="Style Tiles Template">
+
+            <flux:flexform.field.custom name="void" label="Explanation">
+                <h2>This is the Style Tiles Template</h2>
+            </flux:flexform.field.custom>
+            <flux:flexform.field.input name="cssfile" label="CSS File für diese Variante"/>
+            <flux:flexform.grid>
+                <flux:flexform.grid.row>
+                    <flux:flexform.grid.column colPos="1" colspan="3" name="Content"/>
+                </flux:flexform.grid.row>
+            </flux:flexform.grid>
+        </flux:flexform>
+    </f:section>
+
+    <f:section name="Resources">
+        <v:page.header.link rel="stylesheet"
+                            href="{f:uri.resource(path:'stylesheets/{cssfile}',extensionName:'styletiles')}"/>
+    </f:section>
+
+    <f:section name="Content">
+        <f:render section="TopBar"
+                  partial="{v:var.typoscript(path: 'lib.relativePathToFluidcontentZurbPartials')}/ZurbFoundationObjects"
+                  arguments="{_all}"/>
+        <div class="row">
+            <!-- Main Content Section -->
+            <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+            <div class="nine columns">
+                <div class="row">
+                    <div class="eight columns">
+                        <div class="typography radius panel">
+                            <h5 class="information">Call-Out</h5>
+                            <h1>MAIN TITLE<small> h1</small></h1>
+                            <h3>Subtitle<small> h3</small></h2>
+                            <p>Quidenis aut explaudaeri di re comnimi nvelestibus volorias di nem ex eumquat estibusandit quae doluptatis ab illent.<small> p</small></p>
+                            <button class="button radius">Call to Action</button>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <div class="colors">
+                            <h5 class="information">Farben</h5>
+                            <ul class="link-list">
+                                <li class="color-1">&nbsp;</li>
+                                <li class="color-2">&nbsp;</li>
+                                <li class="color-3">&nbsp;</li>
+                                <li class="color-4">&nbsp;</li>
+                                <li class="color-5">&nbsp;</li>
+                                <li class="color-6">&nbsp;</li>
+                                <li class="color-7">&nbsp;</li>
+                                <li class="color-8">&nbsp;</li>
+                                <li class="color-9">&nbsp;</li>
+                            </ul>
+                        </div>
+                        <div class="colors">
+                            <h5 class="information">Adjektive</h5>
+                            <div class="tag-list">
+                                <span class="l"></span>
+                                <span class="xs"></span>
+                                <span class="xxs"></span>
+                                <span class="xl"></span>
+                                <span class="xxl"></span>
+                                <span class="s"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="twelve columns">
+                        <h5 class="information">Inhalt</h5>
+
+                        <h1>Page Title
+                            <small>Page subtitle</small>
+                        </h1>
+                        <p>Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta
+                            meatball short
+                            loin.
+                            Venison tail chuck pork chop, andouille ball tip beef ribs flank boudin bacon. <a href="#">Salami
+                                andouille</a> pork belly short ribs flank cow. Salami sirloin turkey kielbasa. Sausage
+                            venison
+                            pork loin
+                            leberkas chuck short loin, cow ham prosciutto pastrami jowl. Ham hock jerky tri-tip, fatback
+                            hamburger
+                            shoulder swine pancetta ground round. Tri-tip prosciutto meatball turkey, brisket spare ribs
+                            shankle
+                            chuck
+                            cow chicken ham hock boudin meatloaf jowl.</p>
+                    </div>
+                </div>
+
+
+                <div class="row news-list-item">
+                    <div class="ten columns end">
+                        <h5 class="information">News Element</h5>
+                        <h4>
+                            <span class="news-list-date">Kategorie, 22.10.2012</span>
+                            <a href="#">Nitatur, ni quibusa idunditi aperum</a>
+                        </h4>
+
+                        <div class="row">
+                            <div class="four columns end">
+                                <a href="#" class="th">
+                                    <div class="news-image"></div>
+                                </a>
+                            </div>
+                            <div class="eight columns end">
+
+                                <p>Ground round pastrami pork loin tenderloin jerky. Jerky spare ribs biltong, ham hock
+                                    ham capicola pork. Jerky turducken pork, meatloaf sausage.</p>
+                            </div>
+                        </div>
+
+                        <hr class="clearer">
+                    </div>
+                </div>
+            </div>
+            <div class="three columns">
+                <h5 class="information">Bilder</h5>
+                <div class="image-1"></div>
+                <div class="image-2"></div>
+                <div class="image-3"></div>
+                <div class="image-4"></div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="row">
+            <div class="three columns">
+                <h5 class="information">Navigation</h5>
+                <ul class="side-nav">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="nine columns">
+                <ul class="nav-bar left">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+
+        </div class="row">
+        <!-- Footer -->
+
+        <footer class="row">
+            <div class="twelve columns">
+                <hr/>
+                <div class="row">
+                    <div class="six columns">
+                        <p>&copy; Copyright CreaOcchio.</p>
+                    </div>
+                    <div class="six columns">
+                        <ul class="link-list right">
+                            <li><a href="#">Section 1</a></li>
+                            <li><a href="#">Section 2</a></li>
+                            <li><a href="#">Section 3</a></li>
+                            <li><a href="#">Section 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </f:section>
+</div>
+

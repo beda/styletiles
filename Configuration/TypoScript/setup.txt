@@ -1,0 +1,52 @@
+[GLOBAL]
+#---------------------------------------------------------------
+# Fluid Content Elements for fluidcontent
+#---------------------------------------------------------------
+plugin.tx_fed.fce.styletiles {
+	label = Fluid Content Elements - Style Tiles
+	templateRootPath = EXT:styletiles/Resources/Private/Elements/
+	partialRootPath = EXT:styletiles/Resources/Private/Partials/
+	layoutRootPath = EXT:styletiles/Resources/Private/Layouts/
+}
+
+#---------------------------------------------------------------
+# Page Templates for fluidpages
+#---------------------------------------------------------------
+plugin.tx_fed.page.StyleTiles {
+    templateRootPath = EXT:styletiles/Resources/Private/Templates/
+    partialRootPath = EXT:styletiles/Resources/Private/Partials/
+    layoutRootPath = EXT:styletiles/Resources/Private/Layouts/
+}
+
+#---------------------------------------------------------------
+# Uncomment the following lines to use Partials of other Extensions
+#---------------------------------------------------------------
+lib.relativePathToFluidcontentZurbPartials = ../../../../fluidcontent_zurb/Resources/Private/Partials
+
+#---------------------------------------------------------------
+# CSS
+#---------------------------------------------------------------
+page.includeCSS {
+  file1 =
+}
+
+#---------------------------------------------------------------
+# Javascript
+#---------------------------------------------------------------
+
+#---------------------------------------------------------------
+# Typoscript for fluidcontent_zurb
+#---------------------------------------------------------------
+lib.topbar {
+    main {
+        entryLevel = 1
+    }
+    sub {
+        entryLevel = 2
+    }
+    logo {
+      file = EXT:styletiles/Resources/Public/images/project/logo.png
+      alt =
+      pageUid =
+    }
+}

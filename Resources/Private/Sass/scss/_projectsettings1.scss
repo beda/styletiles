@@ -1,0 +1,33 @@
+// Your custom settings file to override Foundation defaults
+$mainColor: #3A78A3;
+$secondaryColor: #952237;
+$highlightColor: #BCB08E;
+$nav-bar-bgcolor: $highlightColor;
+
+$bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$typekit: "minion-pro-caption", Georgia, Times, serif;
+
+$colorList: $mainColor $secondaryColor $highlightColor;
+
+$image1: 'http://www.creaocchio.ch/fileadmin/images/team_01.jpg';
+$image2: 'http://www.creaocchio.ch/fileadmin/images/crea_valentinsfilm.jpg';
+$imageList: $image1 $image2;
+
+$news-image: 'http://www.creaocchio.ch/fileadmin/images/Kollage-Edelmann-Laptop.jpg';
+
+//Topbar
+$topBarBgColor: #aaa;
+$topBarHeight: 50px;
+.top-bar > ul .name {
+  img {
+    max-width: 150px;
+  }
+  &:after {
+    content: "Style Tile Version 1.0";
+    color: #222;
+  }
+}
+
+//Adjektive
+$AdjektivListe: frisch spannend neu blau unglaublich extrem;
+$TagCloudListe: xxl xl l s xs xxs;
