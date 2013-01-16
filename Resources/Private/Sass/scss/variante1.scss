@@ -1,54 +1,12 @@
 // Your custom scss to complement or override Foundation defaults
-// Do not edit app.scss or _settings.scss; these files get overwritten by Zurb Foundation Updates
+// Do not edit app.scss, _settings.scss,_styletiles.scss; these files get overwritten by Extension Updates
 @import "projectsettings1";
 @import "foundation";
-@import "compass/utilities/general/tag-cloud";
+@import "compass";
+@import "styletiles";
 
 //Add your styles here
-//Colors
-@for $i from 1 through length($colorList) {
-  .color-#{$i} {
-    background-color: nth($colorList, $i);
-    width: 70px;
-    height: 70px;
-    margin-bottom: 20px;
-    font-size: 0.8em;
-    &:after {
-      content: "#{nth($colorList, $i)}";
-    }
-  }
-}
 
-//Images
-@for $i from 1 through length($imageList) {
-  .image-#{$i} {
-    background: url('#{nth($imageList, $i)}') no-repeat;
-    background-size: cover;
-    min-height: 250px;
-    margin-bottom: 20px;
-  }
-}
-
-//News-image
-.news-image {
-  background: url('#{$news-image}') no-repeat;
-  background-size: cover;
-  min-height: 200px;
-}
-
-//Tag List
-.tag-list {
-  @include tag-cloud(26px);
-}
-
-@for $i from 1 through length($AdjektivListe) {
-  .#{nth($TagCloudListe,$i)} {
-    &:after {
-      content: "#{nth($AdjektivListe, $i)}";
-      color: #{nth($colorList, floor($i/length($colorList))+1)};
-    }
-  }
-}
 
 //content
 .content {
