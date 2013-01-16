@@ -5,4 +5,52 @@
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
+    <f:section name="TYPO3-Text-Element">
+        <hr style="margin-bottom: 0;">
+        <small class="styletiles-info">TYPO3-Text-Element</small>
+        <div class="csc-default">
+            <header class="csc-header csc-header-n1">
+                <h1 class="csc-firstHeader">
+                    <v:format.placeholder.lipsum paragraphs="1" wordsPerParagraph="2"/>
+                    <small class="styletiles-info">h1</small>
+                </h1>
+            </header>
+            <p>
+                <v:format.placeholder.lipsum paragraphs="1" wordsPerParagraph="23" />
+                <small class="styletiles-info">p</small>
+            </p>
+        </div>
+    </f:section>
+
+    <f:section name="TYPO3-TextwithImage-Element">
+        <hr style="margin-bottom: 0;">
+        <small class="styletiles-info">TYPO3-TextwithImage-Element</small>
+        <div class="csc-default">
+            <header class="csc-header csc-header-n1">
+                <h1 class="csc-firstHeader">
+                    <v:format.placeholder.lipsum paragraphs="1" wordsPerParagraph="3"/>
+                    <small class="styletile-info">h1</small>
+                </h1>
+            </header>
+            <div class="csc-textpic csc-textpic-left csc-textpic-above">
+                <div class="csc-textpic-imagewrap">
+                    <figure class="csc-textpic-image csc-textpic-last">
+                        <a href="#">
+                            <v:format.placeholder.image width="600" height="300" backgroundColor="dddddd"
+                                                        textColor="FFFFFF"/>
+                        </a>
+                    </figure>
+                </div>
+                <div class="csc-textpic-text">
+                    <h3><a href="#">
+                        <v:format.placeholder.lipsum paragraphs="2" wordsPerParagraph="4"/>
+                    </a><small class="styletile-info">h3</small></h3>
+                    <p class="bodytext">
+                        <v:format.placeholder.lipsum paragraphs="2" wordsPerParagraph="15"/><small class="styletile-info">p</small><br>
+                        <a href="#">Read more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </f:section>
 </div>
